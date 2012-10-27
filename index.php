@@ -2,9 +2,11 @@
 <?php
     // Configuration
     require_once "./config/details.php";
+    require_once "./config/locations.php";
     
     // Helpers
     require_once "./helpers/style.php";
+    require_once "./helpers/articles.php";
 ?>
 <html>
     <head>
@@ -34,27 +36,7 @@
         </header>
         
         <div id="body" class="container">
-            <article>
-                <h1>If it’s Good I Don’t Care Which License it Uses</h1>
-                <div class="post-details">Posted at October 8, 2012</div>
-                
-                <div class="article-body">
-                    <p>Today I could finally watch the Stallman’s interview on The Linux Action Show, and their second video about it, and I couldn’t agree more with Bryan, so I thought about writing an article about it since most of the responses I saw were just a lot of crap thrown at a person that wants to make a living out of software development.</p>
-
-                    <p>Stallman has a great dream that software should be “free”, but I think that the developer must also have the freedom to choose if they want to charge or not for their software. Free software is great, but if a developer wants to make a living out of their software, which means be dedicated full-time and not have another job, it’s almost impossible if you only make free software, even if you accept donations they won’t be good enough to make a living. Which means you’ll have to charge for some of your software.</p>
-                </div>
-            </article>
-            <hr>
-            <article>
-                <h1>If it’s Good I Don’t Care Which License it Uses</h1>
-                <div class="post-details">Posted at October 8, 2012</div>
-                
-                <div class="article-body">
-                    <p>Today I could finally watch the Stallman’s interview on The Linux Action Show, and their second video about it, and I couldn’t agree more with Bryan, so I thought about writing an article about it since most of the responses I saw were just a lot of crap thrown at a person that wants to make a living out of software development.</p>
-            
-                    <p>Stallman has a great dream that software should be “free”, but I think that the developer must also have the freedom to choose if they want to charge or not for their software. Free software is great, but if a developer wants to make a living out of their software, which means be dedicated full-time and not have another job, it’s almost impossible if you only make free software, even if you accept donations they won’t be good enough to make a living. Which means you’ll have to charge for some of your software.</p>
-                </div>
-            </article>
+            <?php Article::posts_list($blog_posts_location); ?>
         </div>
         
         <footer>
