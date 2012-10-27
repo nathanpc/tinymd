@@ -1,0 +1,56 @@
+/* General Stuff */
+body {
+    font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+}
+
+.container {
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* Top Container */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 130px;
+
+    background-color: rgb(40, 40, 40);
+    color: whitesmoke;
+}
+
+header > .container {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-flex: 1;
+    box-sizing: border-box;
+}
+
+header > .container > .pane:first-child {
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+header > .container > .pane:last-child {
+    margin-left: 20px;
+    margin-right: 100px;
+}
+
+header > .container > .pane {
+    width: 350px;
+    text-align: center;
+}
+
+header > .container > .pane > h1 {
+    font-size: 1.6em;
+    margin: 0;
+}
+
+header > .container > .pane > h2 {
+    font-size: 1.1em;
+    margin: 0;
+}
