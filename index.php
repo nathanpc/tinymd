@@ -33,7 +33,7 @@
                 </div>
                 
                 <div class="pane">
-                    <p>Some awesome text here because this is fucking awesome.</p>
+                    <p>Some awesome text here because this is tinymd.</p>
                 </div>
             </div>
         </header>

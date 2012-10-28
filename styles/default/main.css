@@ -38,9 +38,12 @@ header {
 
 header > .container {
     display: -webkit-box;
+    -webkit-box-align: center;
     -webkit-box-orient: horizontal;
     -webkit-box-flex: 1;
     box-sizing: border-box;
+    
+    height: 130px;
 }
 
 header > .container > .pane:first-child {
