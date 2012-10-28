@@ -36,6 +36,18 @@ header {
     border-bottom: 1px solid #7C7C7C;
 }
 
+header a {
+    color: whitesmoke;
+}
+
+header a:hover {
+    background-color: #444;
+}
+
+header a:visited {
+    color: whitesmoke;
+}
+
 header > .container {
     display: -webkit-box;
     -webkit-box-align: center;
