@@ -1,6 +1,22 @@
 /* General Stuff */
 body {
     font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(158, 0, 0);
+    border-bottom: 1px dotted #8C8C8C;
+}
+
+a:hover {
+    background-color: #eee;
+    border-bottom: 1px solid #8C8C8C;
+}
+
+a:visited {
+    color: rgb(76, 0, 158);
 }
 
 .container {
@@ -68,13 +84,22 @@ header > .container > .pane > h2 {
     font-size: 1.45em;
 }
 
+#body > article > h1 > a {
+    text-decoration: none;
+    border-bottom: 0;
+}
+
+#body > article > h1 > a:hover {
+    border-bottom: 1px solid #8C8C8C;
+}
+
+#body > article > h1 > a:visited {
+    color: #111;
+}
+
 #body > article > .post-details {
     color: rgb(70, 70, 70);
     font-size: 15px;
-}
-
-#body > article > .article-body {
-    
 }
 
 #body > hr {

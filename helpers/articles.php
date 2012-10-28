@@ -20,7 +20,7 @@ class Article {
         $permalink = "?post=$id";
         
         echo "<article>";
-        echo "<h1>$title</h1>";
+        echo "<h1><a href=\"$permalink\">$title</a></h1>";
         
         echo "<div class=\"post-details\"><a href=\"$permalink\">Permalink</a> - <a href=\"\">Love</a></div>";
         
