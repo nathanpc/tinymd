@@ -115,6 +115,14 @@ header > .container > .pane > h2 {
     font-size: 15px;
 }
 
+#body > article code {
+    padding: 0 3px 0 3px;
+    
+    background-color: whiteSmoke;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+}
+
 #body > hr {
     margin: 25px;
     height: 0;
