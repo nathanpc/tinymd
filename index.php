@@ -42,6 +42,9 @@
             <?php
                 if (isset($_GET["post"])) {
                     Article::single_post($blog_posts_location, $_GET["post"], $blog_post_sort);
+                    if ($enable_disqus) {
+                        Article::build_disqus_area($disqus_shortname);
+                    }
                 } else {
                     Article::posts_list($blog_posts_location, $blog_post_limit, $blog_post_sort);
                 }

@@ -15,6 +15,22 @@ class Article {
 
         return $files; 
     }
+    
+    public static function build_disqus_area($shortname) {
+        echo "<br/>";
+        echo "<div id=\"disqus_thread\"></div>";
+        echo "<script type=\"text/javascript\">";
+            echo "var disqus_shortname = \"$shortname\";";
+
+            echo "(function() {";
+                echo "var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;";
+                echo "dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';";
+                echo "(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);";
+            echo "})();";
+        echo "</script>";
+        echo "<noscript>Please enable JavaScript to view the <a href=\"http://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>";
+        echo "<a href=\"http://disqus.com\" class=\"dsq-brlink\">comments powered by <span class=\"logo-disqus\">Disqus</span></a>";
+    }
 
     private static function build_post_item($title, $body, $id) {
         $permalink = "?post=$id";
