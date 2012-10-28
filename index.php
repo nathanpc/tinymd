@@ -36,7 +36,13 @@
         </header>
         
         <div id="body" class="container">
-            <?php Article::posts_list($blog_posts_location); ?>
+            <?php
+                if (isset($_GET["post"])) {
+                    Article::single_post($blog_posts_location, $_GET["post"]);
+                } else {
+                    Article::posts_list($blog_posts_location);
+                }
+            ?>
         </div>
         
         <footer>
