@@ -33,7 +33,7 @@
                 </div>
                 
                 <div class="pane">
-                    <p>Some awesome text here because this is tinymd.</p>
+                    <?php echo implode("\n", file("./templates/header.html")); ?>
                 </div>
             </div>
         </header>
@@ -50,13 +50,7 @@
         
         <footer>
             <div class="container">
-                <span style="float: left;">
-                    Powered by <a href="https://github.com/nathanpc/tinymd">tinymd</a>
-                </span>
-                
-                <span style="float: right;">
-                    <a href="rss.php">RSS</a>
-                </span>
+                <?php echo implode("\n", file("./templates/footer.html")); ?>
             </div>
         </footer>
     </body>
