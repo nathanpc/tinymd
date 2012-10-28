@@ -14,6 +14,9 @@
         <title><?php echo $blog_title; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <!-- Feed -->
+        <link href="rss.php" type="application/atom+xml" rel="alternate" title=<?php echo "\"$blog_title\""; ?>>
+        
         <!-- Libraries -->
         <link href="http://necolas.github.com/normalize.css/2.0.1/normalize.css" rel="stylesheet" type="text/css" />
         <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
@@ -52,7 +55,7 @@
                 </span>
                 
                 <span style="float: right;">
-                    RSS
+                    <a href="rss.php">RSS</a>
                 </span>
             </div>
         </footer>
