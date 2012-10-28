@@ -66,6 +66,8 @@ header > .container > .pane:first-child {
 header > .container > .pane:last-child {
     margin-left: 20px;
     margin-right: 100px;
+
+    text-align: justify;
 }
 
 header > .container > .pane {
