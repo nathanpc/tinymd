@@ -18,9 +18,9 @@ class Article {
 
     private static function build_post_item($title, $body, $id) {
         $permalink = "?post=$id";
-
+        
         echo "<article>";
-        echo "<h1><a href=\"$permalink\">$title</a></h1>";
+        echo "<h1><a href=\"$permalink\">" . substr(Markdown($title), 3, -5) . "</a></h1>";
 
         echo "<div class=\"post-details\"><a href=\"$permalink\">Permalink</a> - <a href=\"\">Love</a></div>";
 
