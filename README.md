@@ -3,7 +3,7 @@
 The tiny databaseless Markdown blog engine written in PHP.
 
 
-# Installation
+## Installation
 
 To install **tinymd** on your server just do the usual `git clone git://github.com/nathanpc/tinymd.git` so you can get updates just by doing a `git pull`.
 
