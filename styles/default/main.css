@@ -85,6 +85,7 @@ header > .container > .pane > h2 {
 #body > article > h1 > a {
     text-decoration: none;
     border-bottom: 0;
+    color: #111;
 }
 
 #body > article > h1 > a:hover {
