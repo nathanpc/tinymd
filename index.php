@@ -7,6 +7,7 @@
     // Helpers
     require_once "./helpers/style.php";
     require_once "./helpers/articles.php";
+    require_once "./helpers/trackers.php";
 ?>
 <html>
     <head>
@@ -23,6 +24,17 @@
         
         <!-- Theme -->
         <?php Style::css_file_includes($blog_theme_location, $blog_theme_name); ?>
+        
+        <!-- Trackers -->
+        <?php
+            if ($enable_analytics) {
+                Tracker::Analytics($analytics_tracking_id);
+            }
+            
+            if ($enable_gauges) {
+                Tracker::Gauges($gauges_tracking_id);
+            }
+        ?>
     </head>
     <body>
         <header>
