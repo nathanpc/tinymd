@@ -28,7 +28,7 @@
         <!-- Trackers -->
         <?php
             if ($enable_analytics) {
-                Tracker::Analytics($analytics_tracking_id);
+                Tracker::GoogleAnalytics($analytics_tracking_id);
             }
             
             if ($enable_gauges) {
