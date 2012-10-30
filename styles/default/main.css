@@ -123,6 +123,14 @@ header > .container > .pane > h2 {
     border-radius: 5px;
 }
 
+#body > article > .article-body > h2 {
+    font-size: 1.2em;
+}
+
+#body > article > .article-body > h3 {
+    font-size: 1.05em;
+}
+
 #body > hr {
     margin: 25px;
     height: 0;
