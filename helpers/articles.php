@@ -3,17 +3,43 @@
 require_once "./libs/markdown/markdown.php";
 
 class Article {
-    private static function post_file_list($directory, $sortOrder = SORT_DESC) {
-        $files = glob("$directory/*.*");
+    private static function post_file_list($directory, $sort_order = SORT_DESC) {
+        self::populate_cache($directory);
+        $cache = file("./list_cache.lst", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        
+        if ($sort_order == SORT_DESC) {
+            $cache = array_reverse($cache);
+        }
 
-        array_multisort(
-            array_map("filectime", $files),
-            SORT_NUMERIC,
-            $sortOrder,  // SORT_ASC for oldest first
-            $files
-        );
-
-        return $files; 
+        return $cache; 
+    }
+    
+    private static function populate_cache($posts_directory) {
+        if (!file_exists("./list_cache.lst")) {
+            $handle = fopen("./list_cache.lst", "w") or die("Could not create cache file");
+            fclose($handle);
+        }
+        
+        $cache = file("./list_cache.lst", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $files = glob("$posts_directory/*.*");
+        
+        if (!empty($cache)) {
+            $cache = array_map("trim", $cache);
+        }
+        
+        $changes = array_merge(array_diff($files, $cache));
+        
+        if (!empty($changes)) {
+            // New stuff.
+            $append = "";
+            if (empty($cache)) {
+                $append = implode("\n", $changes);
+            } else {
+                $append = "\n" . implode("\n", $changes);
+            }
+            
+            file_put_contents("./list_cache.lst", $append, FILE_APPEND);
+        }
     }
     
     public static function build_disqus_area($shortname) {
