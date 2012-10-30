@@ -53,7 +53,7 @@
         <div id="body" class="container">
             <?php
                 if (isset($_GET["post"])) {
-                    Article::single_post($blog_posts_location, $_GET["post"], $blog_post_sort);
+                    Article::single_post($blog_posts_location, $_GET["post"]);
                     if ($enable_disqus) {
                         Article::build_disqus_area($disqus_shortname);
                     }

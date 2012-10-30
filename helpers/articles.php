@@ -72,6 +72,7 @@ class Article {
 
     public static function posts_list($directory, $limit = 10, $sort_order = SORT_DESC) {
         $post_files = self::post_file_list($directory, $sort_order);
+        $post_count = count($post_files);
 
         for ($i = 0; $i < count($post_files); $i++) {
             if ($i < $limit) {
@@ -84,13 +85,13 @@ class Article {
                     echo "<hr>";
                 }
 
-                self::build_post_item($title, $body, $i);
+                self::build_post_item($title, $body, $post_count - 1 - $i);
             }
         }
     }
 
-    public static function single_post($directory, $id, $sort_order = SORT_DESC) {
-        $post_files = self::post_file_list($directory, $sort_order);
+    public static function single_post($directory, $id) {
+        $post_files = self::post_file_list($directory, SORT_ASC);
 
         if (isset($post_files[$id])) {
             $lines = file($post_files[$id]);
