@@ -146,7 +146,7 @@ header > .container > .pane > h2 {
     margin: 0;
 }
 
-#body > article > .article-body > blockquote > img {
+#body > article > .article-body > blockquote img {
     max-width: 940px;
 }
 
