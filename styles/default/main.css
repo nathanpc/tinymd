@@ -123,12 +123,27 @@ header > .container > .pane > h2 {
     border-radius: 5px;
 }
 
+#body > article > .article-body > h1 {
+    font-size: 1.35em;
+}
+
 #body > article > .article-body > h2 {
     font-size: 1.2em;
 }
 
 #body > article > .article-body > h3 {
     font-size: 1.05em;
+}
+
+#body > article > .article-body > blockquote {
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: gainsboro;
+}
+
+#body > article > .article-body > blockquote > p {
+    margin: 0;
 }
 
 #body > hr {
