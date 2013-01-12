@@ -138,8 +138,9 @@ header > .container > .pane > h2 {
 #body > article > .article-body > blockquote {
     margin: 0 20px;
     padding: 10px;
-    border-radius: 3px;
-    background-color: gainsboro;
+    background-color: rgb(240, 240, 240);
+    border-left: 2px solid rgb(130, 130, 130);
+    color: rgb(60, 60, 60);
 }
 
 #body > article > .article-body > blockquote > p {
